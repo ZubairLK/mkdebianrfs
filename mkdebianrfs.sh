@@ -244,7 +244,7 @@ echo
 
 if [ -n "${target_tar}" ]; then
     echo "Creating ${target_tar}..."
-    tar -capf "${target_tar}" -C "${tmp_dir}" "${tar_dir}"
+    tar -capf "${target_tar}" --xattrs -C "${tmp_dir}/${tar_dir}" .
 fi
 
 cleanup
